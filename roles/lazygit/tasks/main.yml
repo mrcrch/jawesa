@@ -1,0 +1,6 @@
+---
+- name: Tasks
+  include_tasks: "{{ item }}.yml"
+  loop:
+    - repository
+    - install

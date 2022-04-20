@@ -23,6 +23,10 @@
       when: docker_install
       tags: [dev]
 
+    - role: lazygit
+      when: lazygit_install
+      tags: [dev]
+
     - role: google-chrome
       when: google_chrome_install
       tags: [others]

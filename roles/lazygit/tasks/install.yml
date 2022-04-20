@@ -1,0 +1,6 @@
+---
+- name: Install
+  ansible.builtin.apt:
+    name: lazygit
+    update_cache: yes
+  become: yes

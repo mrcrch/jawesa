@@ -3,6 +3,7 @@ rvm_install: false
 nvm_install: false
 docker_install: false
 google_chrome_install: false
+lazygit_install: false
 
 apt_manage: false
 apt_install_packages: []

@@ -1,0 +1,5 @@
+---
+- name: Repository
+  ansible.builtin.apt_repository:
+    repo: ppa:lazygit-team/release
+  become: yes

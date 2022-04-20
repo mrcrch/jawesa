@@ -69,6 +69,7 @@ Os arquivos de configuração estão localizados na pasta `vars`.
 | nvm_install                   | NVM deve ser instalado?                                            |  Boolean |    false    |
 | docker_install                | Docker deve ser instalado?                                         |  Boolean |    false    |
 | google_chrome_install         | Google Chrome deve ser instalado?                                  |  Boolean |    false    |
+| lazygit_install               | Lazygit deve ser instalado?                                        |  Boolean |    false    |
 | apt_manage                    | Operações (update/autoremove/autoclean) APT devem ser gerenciadas? |  Boolean |    false    |
 | apt_install_packages          | Pacotes a serem instalados via APT                                 |   Array  |      []     |
 | apt_remove_packages           | Pacotes a serem removidos via APT                                  |   Array  |      []     |
@@ -96,4 +97,7 @@ De forma semelhante, a remoção de um item de uma lista de instalação de paco
   * [ ] Docker
   * [ ] Google Chrome
 * [ ] Acompanhamento de Fluxo de Atualização
+* [ ] Testes automáticos
+* [ ] Possibilidade de adição de repositórios e chaves de maneira genérica (lazygit, por exemplo)
+* [ ] Translation
 
