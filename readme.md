@@ -90,7 +90,6 @@ De forma semelhante, a remoção de um item de uma lista de instalação de paco
 ## 🔮 Futuro 
 
 * [ ] Definir Licença
-* [ ] Instalação do Docker Compose
 * [ ] Desinstalação das Aplicações
   * [ ] NVM
   * [ ] RVM
