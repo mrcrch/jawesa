@@ -10,7 +10,7 @@
 
 Esse projeto consiste de um Playbook [Ansible](https://www.ansible.com/) totalmente parametrizável para instalação de aplicações e ferramentas
 
-### Escopo
+### 📝 Escopo
 
 Por padrão, nenhuma ação é realizada. Para cada ação é necessário a sua configuração prévia
 
@@ -28,9 +28,13 @@ Por padrão, nenhuma ação é realizada. Para cada ação é necessário a sua 
 * Outros
   * Google Chrome (Instalação)
 
-## 📝 Pré-Requisitos
+## ⚓ Pré-Requisitos
 
-* Ansible
+* [Ansible](https://www.ansible.com/)
+
+```
+sudo apt-get install ansible
+```
 
 ## 💻 Execução
 
@@ -72,7 +76,7 @@ Os arquivos de configuração estão localizados na pasta `vars`.
 | snap_install_classic_packages | Pacotes a serem instalados via Snap, com a flag `--classic`        |   Array  |      []     |
 | snap_remove_packages          | Pacotes a serem removidos via Snap                                 |   Array  |      []     |
 
-💡 Uma maneira simples de encarar as configurações relacionadas a instalação e remoção de pacotes é: garanta que esse pacote pacote esteja instalado/desinstalado
+💡 Uma maneira simples de encarar as configurações relacionadas a instalação e remoção de pacotes é: garanta que esse pacote esteja instalado (ou não 🤷)
 
 ### ❗ Ponto de Atenção 
 
