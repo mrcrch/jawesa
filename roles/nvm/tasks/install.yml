@@ -1,0 +1,5 @@
+---
+- name: Install
+  shell: "{{ nvm_installer_path }}"
+  args:
+    creates: "{{ nvm_install_path }}/nvm.sh"

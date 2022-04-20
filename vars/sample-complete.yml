@@ -1,0 +1,25 @@
+rvm_install: true
+nvm_install: true
+docker_install: true
+google_chrome_install: true
+
+apt_manage: true
+
+apt_install_packages:
+  - git
+  - htop
+  - neofetch
+
+apt_remove_packages:
+  - transmission-common
+  - thunderbird
+
+snap_install_packages:
+  - pinta
+
+snap_install_classic_packages:
+  - code
+  - slack
+
+snap_remove_packages:
+  - telegram

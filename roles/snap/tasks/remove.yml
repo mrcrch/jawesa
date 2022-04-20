@@ -1,0 +1,9 @@
+---
+- name: Remove Packages
+  community.general.snap:
+    name: "{{ package }}"
+    state: absent
+  loop: "{{ snap_remove_packages | default([]) }}"
+  loop_control:
+    loop_var: package
+  become: yes

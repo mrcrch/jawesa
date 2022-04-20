@@ -1,0 +1,6 @@
+---
+- name: Install
+  ansible.builtin.apt:
+    name: rvm
+    update_cache: true
+  become: yes

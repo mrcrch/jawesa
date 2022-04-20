@@ -1,0 +1,10 @@
+---
+- name: Remove
+  ansible.builtin.apt:
+    name: "{{ package }}"
+    state: absent
+    purge: yes
+  loop: "{{ apt_remove_packages | default([]) }}"
+  loop_control:
+    loop_var: package
+  become: yes

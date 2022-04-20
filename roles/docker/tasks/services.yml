@@ -1,0 +1,12 @@
+---
+- name: Services
+  ansible.builtin.systemd:
+    name: "{{ service  }}"
+    enabled: yes
+    state: started
+  become: yes
+  loop:
+    - docker
+    - containerd
+  loop_control:
+    loop_var: service

@@ -1,0 +1,11 @@
+---
+- name: Tasks
+  include_tasks: "{{ task }}.yml"
+  loop:
+    - dependencies
+    - repository
+    - install
+    - group
+    - services
+  loop_control:
+    loop_var: task

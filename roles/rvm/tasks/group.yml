@@ -1,0 +1,7 @@
+---
+- name: Add User In Group
+  user:
+    name: "{{ ansible_user }}"
+    groups: "{{ rvm_group }}"
+    append: yes
+  become: yes

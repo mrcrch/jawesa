@@ -1,0 +1,8 @@
+---
+- name: Install Packages
+  community.general.snap:
+    name: "{{ package }}"
+  loop: "{{ snap_install_packages | default([]) }}"
+  loop_control:
+    loop_var: package
+  become: yes

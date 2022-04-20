@@ -1,0 +1,5 @@
+---
+- name: AutoClean
+  ansible.builtin.apt:
+    autoclean: yes
+  become: yes

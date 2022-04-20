@@ -1,0 +1,6 @@
+---
+- name: Download
+  ansible.builtin.get_url:
+    url: "https://raw.githubusercontent.com/nvm-sh/nvm/{{ nvm_version }}/install.sh"
+    dest: "{{ nvm_installer_path }}"
+    mode: '0700'

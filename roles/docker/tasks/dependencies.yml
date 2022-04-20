@@ -1,0 +1,9 @@
+---
+- name: Dependencies
+  ansible.builtin.apt:
+    pkg:
+      - ca-certificates
+      - curl
+      - gnupg
+    update_cache: yes
+  become: yes

@@ -1,0 +1,6 @@
+---
+- name: Upgrade
+  ansible.builtin.apt:
+    name: "*"
+    state: latest
+  become: yes

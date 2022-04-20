@@ -1,0 +1,9 @@
+---
+- name: Install
+  ansible.builtin.apt:
+    name: "{{ package }}"
+    update_cache: yes
+  loop: "{{ apt_install_packages | default([]) }}"
+  loop_control:
+    loop_var: package
+  become: yes

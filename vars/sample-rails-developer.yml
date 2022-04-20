@@ -1,0 +1,20 @@
+rvm_install: true
+nvm_install: true
+docker_install: true
+
+apt_manage: true
+
+apt_install_packages:
+  - git
+  - postgresql-client
+  - libpq-dev
+
+apt_remove_packages: [] 
+
+snap_install_packages: [] 
+
+snap_install_classic_packages:
+  - code
+  - heroku
+
+snap_remove_packages: []

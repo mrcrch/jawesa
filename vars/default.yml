@@ -1,0 +1,13 @@
+---
+rvm_install: false
+nvm_install: false
+docker_install: false
+google_chrome_install: false
+
+apt_manage: false
+apt_install_packages: []
+apt_remove_packages: []
+
+snap_install_packages: []
+snap_install_classic_packages: []
+snap_remove_packages: []

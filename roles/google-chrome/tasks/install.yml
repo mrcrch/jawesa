@@ -1,0 +1,6 @@
+---
+- name: Install
+  ansible.builtin.apt:
+    name: google-chrome-stable
+    update_cache: yes
+  become: yes

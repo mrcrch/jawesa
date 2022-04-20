@@ -1,0 +1,16 @@
+---
+- name: "Architecture is AMD64?"
+  ansible.builtin.set_fact:
+    repo_architecture: amd64
+  when: ansible_architecture == "x86_64"
+
+- name: Signing Key
+  ansible.builtin.apt_key :
+    url: https://dl.google.com/linux/linux_signing_key.pub
+  become: yes
+
+- name: Repository
+  ansible.builtin.apt_repository:
+    repo: "deb [arch={{ repo_architecture }}] http://dl.google.com/linux/chrome/deb/ stable main"
+    filename: google-chrome
+  become: yes

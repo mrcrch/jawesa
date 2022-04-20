@@ -1,0 +1,45 @@
+- hosts: localhost
+  connection: local
+
+  pre_tasks:
+
+    - include_vars: default.yml
+      tags: [always]
+
+    - include_vars: custom.yml
+      ignore_errors: yes
+      tags: [always]
+
+  roles:
+    - role: rvm
+      when: rvm_install
+      tags: [dev]
+
+    - role: nvm
+      when: nvm_install
+      tags: [dev]
+
+    - role: docker
+      when: docker_install
+      tags: [dev]
+
+    - role: google-chrome
+      when: google_chrome_install
+      tags: [others]
+
+    - role: apt-packages
+      when: >
+        (apt_install_packages | length > 0) or
+        (apt_remove_packages | length > 0)
+      tags: [apt]
+
+    - role: apt
+      when: apt_manage
+      tags: [apt]
+
+    - role: snap
+      when: >
+        (snap_install_packages | length > 0) or
+        (snap_install_classic_packages | length > 0) or
+        (snap_remove_packages | length > 0)
+      tags: [snap]

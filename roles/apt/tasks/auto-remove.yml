@@ -1,0 +1,5 @@
+---
+- name: AutoRemove
+  ansible.builtin.apt:
+    autoremove: yes
+  become: yes

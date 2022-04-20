@@ -1,0 +1,9 @@
+---
+- name: Install Classic Packages
+  community.general.snap:
+    name: "{{ package }}"
+    classic: yes
+  loop: "{{ snap_install_classic_packages | default([]) }}"
+  loop_control:
+    loop_var: package
+  become: yes

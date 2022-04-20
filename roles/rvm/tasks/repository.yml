@@ -1,0 +1,5 @@
+---
+- name: Repository
+  ansible.builtin.apt_repository:
+    repo: ppa:rael-gc/rvm
+  become: yes

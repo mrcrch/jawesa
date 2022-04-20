@@ -1,0 +1,12 @@
+---
+- name: Group
+  ansible.builtin.group:
+    name: "{{ docker_group }}"
+  become: yes
+
+- name: Add User In Group
+  user:
+    name: "{{ ansible_user }}"
+    groups: "{{ docker_group }}"
+    append: yes
+  become: yes

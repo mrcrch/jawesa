@@ -1,0 +1,9 @@
+---
+- name: Install
+  ansible.builtin.apt:
+    pkg:
+      - docker-ce
+      - docker-ce-cli
+      - containerd.io
+    update_cache: yes
+  become: yes

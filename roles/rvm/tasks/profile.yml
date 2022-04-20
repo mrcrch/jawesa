@@ -1,0 +1,5 @@
+---
+- name: Profile 
+  lineinfile:
+    dest: '{{ ansible_user_dir }}/.bashrc'
+    line: 'source "/etc/profile.d/rvm.sh"'
