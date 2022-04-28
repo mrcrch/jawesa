@@ -1,0 +1,6 @@
+---
+- name: Download
+  ansible.builtin.get_url:
+    url: https://get.rvm.io
+    dest: "{{ rvm_installer_path }}"
+    mode: '0700'
