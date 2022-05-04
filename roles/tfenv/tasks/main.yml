@@ -1,0 +1,8 @@
+---
+- name: Tasks
+  include_tasks: "{{ task }}.yml"
+  loop:
+    - git-clone
+    - symlinks
+  loop_control:
+    loop_var: task

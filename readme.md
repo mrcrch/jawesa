@@ -28,6 +28,7 @@ Por padrão, nenhuma ação é realizada. Para cada ação é necessário a sua 
   * Lazygit (Instalação)
   * AWS CLI (Instalação)
   * Terraform (Instalação)
+  * tfenv (Instalação)
 * Outros
   * Google Chrome (Instalação)
 
@@ -75,6 +76,7 @@ Os arquivos de configuração estão localizados na pasta `vars`.
 | lazygit_install               | Lazygit deve ser instalado?                                        |  Boolean |    false    |
 | aws_cli_install               | AWS CLI deve ser instalado?                                        |  Boolean |    false    |
 | terraform_install             | Terraform deve ser instalado?                                      |  Boolean |    false    |
+| tfenv_install                 | tfenv deve ser instalado?                                          |  Boolean |    false    |
 | apt_manage                    | Operações (update/autoremove/autoclean) APT devem ser gerenciadas? |  Boolean |    false    |
 | apt_install_packages          | Pacotes a serem instalados via APT                                 |   Array  |      []     |
 | apt_remove_packages           | Pacotes a serem removidos via APT                                  |   Array  |      []     |
@@ -95,13 +97,14 @@ De forma semelhante, a remoção de um item de uma lista de instalação de paco
 ## 🔮 Futuro 
 
 * [ ] Definir Licença
-* [ ] Desinstalação das Aplicações
+* [ ] Desinstalação/Atualização das Aplicações
   * [ ] NVM
   * [ ] RVM
   * [ ] Docker
   * [ ] Lazygit
   * [ ] AWS CLI
   * [ ] Terraform
+  * [ ] tfenv
   * [ ] Google Chrome
 * [ ] Acompanhamento de Fluxo de Atualização
 * [ ] Testes automáticos

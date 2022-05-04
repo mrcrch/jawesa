@@ -6,6 +6,7 @@ google_chrome_install: false
 lazygit_install: false
 aws_cli_install: false
 terraform_install: false
+tfenv_install: false
 
 apt_manage: false
 apt_install_packages: []

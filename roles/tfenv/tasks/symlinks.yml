@@ -1,0 +1,12 @@
+---
+- name: Symlinks
+  ansible.builtin.file:
+    src: "{{ tfenv_dir }}/bin/{{ bin }}"
+    dest: "/usr/local/bin/{{ bin }}"
+    state: link
+  become: yes
+  loop:
+    - terraform
+    - tfenv
+  loop_control:
+    loop_var: bin

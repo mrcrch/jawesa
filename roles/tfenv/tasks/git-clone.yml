@@ -1,0 +1,6 @@
+---
+- name: Git Clone
+  ansible.builtin.git:
+    repo: https://github.com/tfutils/tfenv.git
+    dest: "{{ tfenv_dir }}"
+    update: no
