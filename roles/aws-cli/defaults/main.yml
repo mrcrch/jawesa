@@ -1,0 +1,4 @@
+---
+aws_download_path: /tmp/awscliv2.zip
+aws_extract_dir: /tmp
+aws_install_dir: /usr/local/aws-cli

@@ -1,0 +1,5 @@
+---
+- name: Extract
+  ansible.builtin.unarchive:
+    src: "{{ aws_download_path }}"
+    dest: "{{ aws_extract_dir }}"

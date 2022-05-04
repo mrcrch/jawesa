@@ -1,0 +1,6 @@
+---
+- name: Install
+  shell: "{{ aws_extract_dir }}/aws/install"
+  args:
+    creates: "{{ aws_install_dir }}"
+  become: yes
