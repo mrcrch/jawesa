@@ -1,0 +1,10 @@
+---
+- name: "Architecture is AMD64?"
+  ansible.builtin.set_fact:
+    repo_architecture: amd64
+  when: ansible_architecture == "x86_64"
+
+- name: Repository
+  ansible.builtin.apt_repository:
+    repo: "deb [arch={{ repo_architecture }}] https://apt.releases.hashicorp.com {{ansible_distribution_release}} main"
+  become: yes

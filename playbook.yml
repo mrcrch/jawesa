@@ -31,6 +31,10 @@
       when: aws_cli_install
       tags: [dev]
 
+    - role: terraform
+      when: terraform_install
+      tags: [dev]
+
     - role: google-chrome
       when: google_chrome_install
       tags: [others]

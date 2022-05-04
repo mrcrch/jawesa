@@ -1,0 +1,6 @@
+---
+- name: Install
+  ansible.builtin.apt:
+    name: terraform
+    update_cache: yes
+  become: yes
