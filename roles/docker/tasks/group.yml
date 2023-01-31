@@ -6,7 +6,7 @@
 
 - name: Add User In Group
   user:
-    name: "{{ ansible_user }}"
+    name: "{{ ansible_user_id }}"
     groups: "{{ docker_group }}"
     append: yes
   become: yes
