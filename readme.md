@@ -8,7 +8,7 @@
 
 ## 🖊️ Introdução
 
-Esse projeto consiste de um Playbook [Ansible](https://www.ansible.com/) totalmente parametrizável para instalação de aplicações e ferramentas
+Esse projeto consiste de um Playbook [Ansible](https://www.ansible.com/) parametrizável para instalação de aplicações e ferramentas
 
 ### 📝 Escopo
 
@@ -25,10 +25,10 @@ Por padrão, nenhuma ação é realizada. Para cada ação é necessário a sua 
   * RVM (Instalação)
   * NVM (Instalação)
   * Docker (Instalação)
-  * Lazygit (Instalação)
-  * AWS CLI (Instalação)
-  * Terraform (Instalação)
-  * tfenv (Instalação)
+  * ~~Lazygit (Instalação)~~
+  * ~~AWS CLI (Instalação)~~
+  * ~~Terraform (Instalação)~~
+  * ~~tfenv (Instalação)~~
 * Outros
   * Google Chrome (Instalação)
 
@@ -37,7 +37,7 @@ Por padrão, nenhuma ação é realizada. Para cada ação é necessário a sua 
 * [Ansible](https://www.ansible.com/)
 
 ```
-sudo apt-get install ansible
+sudo apt-get install ansible-core
 ```
 
 ## 💻 Execução
@@ -53,7 +53,7 @@ ansible-galaxy collection install -r requirements.yml
 * Execute o Playbook
 
 ```bash
-ansible-playbook playbook.yml --ask-become
+ansible-playbook -i "localhost," playbook.yml --ask-become
 ```
 
 No início da execução, será solicitado o `BECOME password` e deve ser informado a senha de `root`. 
@@ -73,10 +73,6 @@ Os arquivos de configuração estão localizados na pasta `vars`.
 | nvm_install                   | NVM deve ser instalado?                                            |  Boolean |    false    |
 | docker_install                | Docker deve ser instalado?                                         |  Boolean |    false    |
 | google_chrome_install         | Google Chrome deve ser instalado?                                  |  Boolean |    false    |
-| lazygit_install               | Lazygit deve ser instalado?                                        |  Boolean |    false    |
-| aws_cli_install               | AWS CLI deve ser instalado?                                        |  Boolean |    false    |
-| terraform_install             | Terraform deve ser instalado?                                      |  Boolean |    false    |
-| tfenv_install                 | tfenv deve ser instalado?                                          |  Boolean |    false    |
 | apt_manage                    | Operações (update/autoremove/autoclean) APT devem ser gerenciadas? |  Boolean |    false    |
 | apt_install_packages          | Pacotes a serem instalados via APT                                 |   Array  |      []     |
 | apt_remove_packages           | Pacotes a serem removidos via APT                                  |   Array  |      []     |
@@ -97,14 +93,15 @@ De forma semelhante, a remoção de um item de uma lista de instalação de paco
 ## 🔮 Futuro 
 
 * [ ] Definir Licença
-* [ ] Desinstalação/Atualização das Aplicações
-  * [ ] NVM
-  * [ ] RVM
-  * [ ] Docker
+* [ ] Instalação das Aplicações
   * [ ] Lazygit
   * [ ] AWS CLI
   * [ ] Terraform
   * [ ] tfenv
+* [ ] Desinstalação/Atualização das Aplicações
+  * [ ] NVM
+  * [ ] RVM
+  * [ ] Docker
   * [ ] Google Chrome
 * [ ] Acompanhamento de Fluxo de Atualização
 * [ ] Testes automáticos

@@ -23,22 +23,6 @@
       when: docker_install
       tags: [dev]
 
-    - role: lazygit
-      when: lazygit_install
-      tags: [dev]
-
-    - role: aws-cli
-      when: aws_cli_install
-      tags: [dev]
-
-    - role: terraform
-      when: terraform_install
-      tags: [dev]
-
-    - role: tfenv
-      when: tfenv_install
-      tags: [dev]
-
     - role: google-chrome
       when: google_chrome_install
       tags: [others]
