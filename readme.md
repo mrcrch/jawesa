@@ -103,8 +103,11 @@ De forma semelhante, a remoção de um item de uma lista de instalação de paco
   * [ ] RVM
   * [ ] Docker
   * [ ] Google Chrome
+* [ ] Variáveis de Controle
+  * [ ] openssl
 * [ ] Acompanhamento de Fluxo de Atualização
 * [ ] Testes automáticos
 * [ ] Possibilidade de adição de repositórios e chaves de maneira genérica (lazygit, por exemplo)
+
 * [ ] Translation
 

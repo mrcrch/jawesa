@@ -1,0 +1,9 @@
+---
+- name: Dependencies
+  ansible.builtin.apt:
+    pkg:
+      - build-essential
+      - checkinstall
+      - zlib1g-dev
+    update_cache: true
+  become: yes

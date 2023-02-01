@@ -11,6 +11,9 @@
       tags: [always]
 
   roles:
+    - role: openssl
+      tags: [system]
+
     - role: rvm
       when: rvm_install
       tags: [dev]

@@ -1,0 +1,46 @@
+---
+- name: Build - config
+  ansible.builtin.shell:
+    chdir: "{{ openssl_extract_dir }}"
+    cmd: "./config --prefix={{ openssl_install_dir }} --openssldir={{ openssl_install_dir }} shared zlib"
+
+- name: Build - make
+  make:
+    chdir: "{{ openssl_extract_dir }}"
+
+- name: Build - make test
+  make:
+    chdir: "{{ openssl_extract_dir }}"
+    target: test
+
+- name: Build - make install
+  make:
+    chdir: "{{ openssl_extract_dir }}"
+    target: install
+  become: yes
+
+- name: Check certs directory
+  ansible.builtin.stat:
+    path: "{{ openssl_certs_dir }}"
+  register: openssl_certs_dir_query
+
+- name: Delete certs directory
+  when: openssl_certs_dir_query.stat.isdir is defined and openssl_certs_dir_query.stat.isdir
+  file:
+    state: absent
+    path: "{{ openssl_certs_dir }}"
+  become: yes
+
+- name: Check certs directory after deletion
+  when: openssl_certs_dir_query.stat.isdir is defined and openssl_certs_dir_query.stat.isdir
+  ansible.builtin.stat:
+    path: "{{ openssl_certs_dir }}"
+  register: openssl_certs_dir_query
+
+- name: Symlink
+  ansible.builtin.file:
+    src: /etc/ssl/certs
+    dest: "{{ openssl_certs_dir }}"
+    state: link
+  when: openssl_certs_dir_query.stat.islnk is not defined
+  become: yes

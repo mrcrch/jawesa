@@ -1,0 +1,5 @@
+---
+- name: Download
+  ansible.builtin.get_url:
+    url: "https://www.openssl.org/source/openssl-{{ openssl_version }}.tar.gz"
+    dest: "{{ openssl_download_path }}"

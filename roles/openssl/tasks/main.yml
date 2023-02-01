@@ -1,0 +1,16 @@
+---
+- name: Check if is installed
+  ansible.builtin.stat:
+    path: "{{ openssl_install_dir }}"
+  register: openssl_install_dir_query
+
+- name: Tasks
+  when: not openssl_install_dir_query.stat.exists
+  include_tasks: "{{ task }}.yml"
+  loop:
+    - dependencies
+    - download
+    - extract
+    - install
+  loop_control:
+    loop_var: task

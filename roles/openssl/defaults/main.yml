@@ -1,0 +1,5 @@
+---
+openssl_download_path: /tmp/openssl.tar.gz
+openssl_extract_dir: /tmp/openssl
+openssl_install_dir: "/opt/openssl-{{ openssl_version }}"
+openssl_certs_dir: "/opt/openssl-{{ openssl_version }}/certs"

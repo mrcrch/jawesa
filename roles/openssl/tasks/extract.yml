@@ -1,0 +1,11 @@
+---
+- name: Directory
+  file:
+    path: "{{ openssl_extract_dir }}"
+    state: directory
+
+- name: Extract
+  ansible.builtin.unarchive:
+    src: "{{ openssl_download_path }}"
+    dest: "{{ openssl_extract_dir }}"
+    extra_opts: [--strip-components=1]
